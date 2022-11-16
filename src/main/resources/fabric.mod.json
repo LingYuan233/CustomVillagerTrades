@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "customvillagertrades",
+  "version": "1.18.2",
+
+  "name": "Custom Villager Trades",
+  "description": "This mod allowed you to customize villager's trades",
+  "authors": [
+    "Ling_Yuan"
+  ],
+
+  "license": "GPL 2.0",
+  "icon": "assets/customvillagertrades/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "top.furryliy.customvillagertrades.Main"
+    ]
+  },
+
+  "depends": {
+    "fabricloader": ">=0.13.3",
+    "fabric": "*",
+    "minecraft": "~1.18.2",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
