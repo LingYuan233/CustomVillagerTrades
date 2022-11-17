@@ -1,4 +1,4 @@
-#Custom Villager Trades
+# Custom Villager Trades
 
 This mod allow you to custom villager's trades.
 You can find <b><i>sample.json</i></b> and <b><i>VillagerConfig</i></b> in <b><i>./config/CustomVillagerTrades/</i></b>
