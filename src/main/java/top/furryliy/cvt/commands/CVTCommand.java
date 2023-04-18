@@ -21,6 +21,7 @@ public class CVTCommand {
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher){
         dispatcher.register(literal("cvt")//根命令
                 .then(literal("reload").executes(ctx -> reload(ctx)))//二级命令
+
         );
     }
 
