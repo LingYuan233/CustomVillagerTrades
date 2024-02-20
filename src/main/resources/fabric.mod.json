@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "custom_villager_trades",
-  "version": "${version}",
+  "version": "1.0.3",
   "name": "CVT1.19.2",
   "description": "Custom Your Villager's Trades",
   "authors": [

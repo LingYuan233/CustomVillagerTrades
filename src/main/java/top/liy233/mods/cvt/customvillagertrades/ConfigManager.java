@@ -11,7 +11,7 @@ import java.util.List;
 
 public class ConfigManager {
 
-    public static ArrayList<Base> parseConfig(){
+    public static ArrayList<Base> parseConfig() throws Exception {
         CustomVillagerTrades.LOGGER.info("Start to parse Config");
         ArrayList<Base> trades;
         Gson gson = new Gson();
@@ -21,7 +21,7 @@ public class ConfigManager {
         trades = gson.fromJson(config, type);
         CustomVillagerTrades.LOGGER.info("Parse over, get "+trades.size()+" trades");
         if (trades.size() == 0){
-            throw new NullConfigException();
+            throw new Exception();
         }
         return trades;
     }

@@ -11,7 +11,7 @@ Custom Villager Trades（简称CVT）是由Ling_Yuan制作的辅助性模组。
 
 ## 如何使用
 
-有关的数据能在文档结尾看到
+**注意：村民职业的字段已于1.19.2-1.0.3版本添加了对模组村民职业的支持，以往的版本仅支持原版村民职业**
 
 1. 安装模组
     - 首先对照自己所需的游戏版本下载对应版本的模组文件
@@ -178,33 +178,5 @@ Custom Villager Trades（简称CVT）是由Ling_Yuan制作的辅助性模组。
             }
             ```
 ---
-
-
-### 请注意：profession字段只能填写原版MC中支持的村民职业
-
-如下：(其他不符合值的全部归类为无业)
-
-|   可填数值    |    描述    |       对应MC原版的村民职业        |
-| :-----------: | :--------: | :-------------------------------: |
-|    farmer     |    农民    |    VillagerProfession.FARMER;     |
-|    armorer    |   护甲商   |    VillagerProfession.ARMORER;    |
-|    butcher    |    屠夫    |    VillagerProfession.BUTCHER;    |
-| cartographer  |   制图员   | VillagerProfession.CARTOGRAPHER;  |
-|    cleric     |    牧师    |    VillagerProfession.CLERIC;     |
-|    fishman    |    渔夫    |   VillagerProfession.FISHERMAN;   |
-|   fletcher    |   制箭师   |   VillagerProfession.FLETCHER;    |
-| leatherworker |   皮革商   | VillagerProfession.LEATHERWORKER; |
-|   librarian   | 图书管理员 |   VillagerProfession.LIBRARIAN;   |
-|     mason     |    石匠    |     VillagerProfession.MASON;     |
-|   shepherd    |   牧羊人   |   VillagerProfession.SHEPHERD;    |
-|   toolsmith   |   工具商   |   VillagerProfession.TOOLSMITH;   |
-|  weaponsmith  |   武器商   |  VillagerProfession.WEAPONSMITH;  |
-|     其他      |    无业    |    VillagerProfession.NITWIT;     |
-
-
-
-
-
-
 
 

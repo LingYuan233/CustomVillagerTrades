@@ -1,7 +1,10 @@
 package top.liy233.mods.cvt.customvillagertrades;
 
+import net.fabricmc.fabric.impl.registry.sync.FabricRegistry;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtHelper;
+import net.minecraft.village.VillagerData;
+import net.minecraft.village.VillagerType;
 import top.liy233.mods.cvt.customvillagertrades.ele.Base;
 
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
@@ -21,7 +24,7 @@ public class Trades {
     private Trades(ArrayList<Base> ls){
         this.list = ls;
     }
-    public static Trades getTrades(){
+    public static Trades getTrades() throws Exception {
         return new Trades(ConfigManager.parseConfig());
     }
 
@@ -102,23 +105,9 @@ public class Trades {
 
     //工具方法
     private static VillagerProfession getProfession(String name){
-        return switch (name) {
-            case "farmer" -> VillagerProfession.FARMER;
-            case "armorer" -> VillagerProfession.ARMORER;
-            case "butcher" -> VillagerProfession.BUTCHER;
-            case "cartographer" -> VillagerProfession.CARTOGRAPHER;
-            case "cleric" -> VillagerProfession.CLERIC;
-            case "fishman" -> VillagerProfession.FISHERMAN;
-            case "fletcher" -> VillagerProfession.FLETCHER;
-            case "leatherworker" -> VillagerProfession.LEATHERWORKER;
-            case "librarian" -> VillagerProfession.LIBRARIAN;
-            case "mason" -> VillagerProfession.MASON;
-            case "shepherd" -> VillagerProfession.SHEPHERD;
-            case "toolsmith" -> VillagerProfession.TOOLSMITH;
-            case "weaponsmith" -> VillagerProfession.WEAPONSMITH;
-            default -> VillagerProfession.NITWIT;
-        };
+        return Registry.VILLAGER_PROFESSION.get(new Identifier(name));
     }
+
     private static Item getStackFromId(String id){
         return Registry.ITEM.get(new Identifier(id));
     }

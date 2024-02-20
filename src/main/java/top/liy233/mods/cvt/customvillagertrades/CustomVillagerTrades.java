@@ -23,9 +23,7 @@ public class CustomVillagerTrades implements ModInitializer {
             Trades trades = Trades.getTrades();
 
             trades.registerTrades();
-        } catch (NullConfigException e) {
-            LOGGER.info("null config");
-        } catch (IOException | CommandSyntaxException e) {
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
